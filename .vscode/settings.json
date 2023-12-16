@@ -1,8 +1,4 @@
 {
-  "path-intellisense.mappings": {
-    "@/": "${workspaceFolder}/src",
-    "~/": "${workspaceFolder}"
-  },
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.printWidth": 120,
@@ -25,7 +21,7 @@
   },
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "files.associations": {
     "*.env.*": "dotenv",

@@ -1,11 +1,9 @@
 <p align="center">
   <a href="https://github.com/zclzone/vue-naive-admin">
-    <img alt="Vue Naive Admin Logo" width="200" src="https://assets.qszone.com/images/logo_qs.svg">
+    <img alt="Vue Naive Admin Logo" width="200" src="./src/assets/images/logo.png">
   </a>
 </p>
 <p align="center">
-  <a href="https://github.com/zclzone/vue-naive-admin"><img alt="stars" src="https://badgen.net/github/stars/zclzone/vue-naive-admin"/></a>
-  <a href="https://github.com/zclzone/vue-naive-admin"><img alt="forks" src="https://badgen.net/github/forks/zclzone/vue-naive-admin"/></a>
   <a href="./LICENSE"><img allt="MIT License" src="https://badgen.net/github/license/zclzone/vue-naive-admin"/></a>
 </p>
 
@@ -33,9 +31,9 @@
 
 ### Preview
 
-[https://template.qszone.com](https://template.qszone.com)
+[https://template.isme.top](https://template.isme.top)
 
-[https://vercel.template.qszone.com](https://vercel.template.qszone.com)
+[https://base.isme.top](https://base.isme.top)
 
 ### Docs
 
@@ -190,17 +188,18 @@ Vue Naive Admin
 
 #### preview
 
-- [https://admin.qszone.com](https://admin.qszone.com)
+- [https://admin.isme.top](https://admin.isme.top)
 - [https://zclzone.github.io/qs-admin](https://zclzone.github.io/qs-admin)
 
 ### Open source projects that use this project:
 
 - [gin-vue-blog](https://github.com/szluyu99/gin-vue-blog): A full-stack blog project in Golang, the frontend of the blog backend is based on vue-naive-admin and integrates with a real backend service, implementing features such as backend-controlled routing.
+- [vue-fastapi-admin](https://github.com/mizhexiaoxiao/vue-fastapi-admin): A Python backend management project that integrates RBAC permission management, dynamic routing, and JWT authentication, helping small and medium-sized applications to quickly establish a foundation.
 
 ### Communication group & About the author
 
-<a href="https://blog.qszone.com/about/">
-  <img src="https://assets.qszone.com/images/about.png" style="max-width: 400px" />
+<a href="https://blog.isme.top/about/">
+  <img src="https://static.isme.top/images/about.png?t=123" style="max-width: 400px" />
 </a>
 
 

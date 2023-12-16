@@ -9,7 +9,7 @@
     >
       <n-upload-dragger>
         <div class="h-150 f-c-c flex-col">
-          <TheIcon icon="mdi:upload" size="68" class="mb-12 c-primary" />
+          <TheIcon icon="mdi:upload" :size="68" class="mb-12 c-primary" />
           <n-text class="text-14 c-gray">点击或者拖动文件到该区域来上传</n-text>
         </div>
       </n-upload-dragger>
@@ -50,10 +50,10 @@ defineOptions({ name: 'Upload' })
 const { copy, copied } = useClipboard()
 
 const imgList = reactive([
-  { url: 'https://cdn.qszone.com/images/5c23d52f880511ebb6edd017c2d2eca2.jpg' },
-  { url: 'https://cdn.qszone.com/images/5c23d52f880511ebb6edd017c2d2eca2.jpg' },
-  { url: 'https://cdn.qszone.com/images/5c23d52f880511ebb6edd017c2d2eca2.jpg' },
-  { url: 'https://cdn.qszone.com/images/5c23d52f880511ebb6edd017c2d2eca2.jpg' },
+  { url: 'https://cdn.isme.top/images/5c23d52f880511ebb6edd017c2d2eca2.jpg' },
+  { url: 'https://cdn.isme.top/images/5c23d52f880511ebb6edd017c2d2eca2.jpg' },
+  { url: 'https://cdn.isme.top/images/5c23d52f880511ebb6edd017c2d2eca2.jpg' },
+  { url: 'https://cdn.isme.top/images/5c23d52f880511ebb6edd017c2d2eca2.jpg' },
 ])
 
 watch(copied, (val) => {

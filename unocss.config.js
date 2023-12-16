@@ -1,19 +1,13 @@
 import { defineConfig, presetAttributify, presetUno } from 'unocss'
+import presetRemToPx from '@unocss/preset-rem-to-px'
 
 export default defineConfig({
-  exclude: [
-    'node_modules',
-    '.git',
-    '.github',
-    '.husky',
-    '.vscode',
-    'build',
-    'dist',
-    'mock',
-    'public',
-    './stats.html',
-  ],
-  presets: [presetUno(), presetAttributify()],
+  content: {
+    pipeline: {
+      include: [/\.(vue|svelte|[jt]sx|mdx?|html)($|\?)/],
+    },
+  },
+  presets: [presetUno(), presetAttributify(), presetRemToPx({ baseFontSize: 4 })],
   shortcuts: [
     ['wh-full', 'w-full h-full'],
     ['f-c-c', 'flex justify-center items-center'],

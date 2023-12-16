@@ -28,6 +28,7 @@ export async function resetRouter() {
 }
 
 export async function addDynamicRoutes() {
+  // return Promise.reject('123')
   const token = getToken()
 
   // 没有token情况
@@ -37,8 +38,8 @@ export async function addDynamicRoutes() {
   }
 
   // 有token的情况
+  const userStore = useUserStore()
   try {
-    const userStore = useUserStore()
     const permissionStore = usePermissionStore()
     !userStore.userId && (await userStore.getUserInfo())
     const accessRoutes = permissionStore.generateRoutes(userStore.role)
@@ -47,8 +48,25 @@ export async function addDynamicRoutes() {
     })
     router.hasRoute(EMPTY_ROUTE.name) && router.removeRoute(EMPTY_ROUTE.name)
     router.addRoute(NOT_FOUND_ROUTE)
+
+    window.$notification?.success({
+      title: '🎉🎉🎉 2.0 全栈版本开源了！',
+      content: () =>
+        h(
+          'span',
+          {},
+          '2.0为全栈版本，提供前端+后端，全新重构，全面简化，',
+          h(
+            'a',
+            { href: 'https://admin.isme.top', target: '__blank' },
+            '👉体验 https://admin.isme.top'
+          )
+        ),
+    })
   } catch (error) {
     console.error(error)
+    $message.error('初始化用户信息失败: ' + error)
+    userStore.logout()
   }
 }
 
