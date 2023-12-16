@@ -22,7 +22,7 @@ export async function refreshAccessToken() {
     return
   }
   const { time } = tokenItem
-  // token生成或者刷新后30分钟内不执行刷新
+  // Do not execute the refresh within 30 minutes after the token generates or refreshes
   if (Date.now() - time <= 1000 * 60 * 30) return
   try {
     const res = await api.refreshToken()

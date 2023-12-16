@@ -19,7 +19,7 @@
             v-model:value="loginInfo.name"
             autofocus
             class="h-48 items-center text-16"
-            placeholder="name"
+            placeholder="Name"
             :maxlength="20"
           >
             <template #prefix>
@@ -33,7 +33,7 @@
             class="h-48 items-center text-16"
             type="password"
             show-password-on="mousedown"
-            placeholder="password"
+            placeholder="Password"
             :maxlength="20"
             @keydown.enter="handleLogin"
           >
@@ -101,14 +101,14 @@ const loading = ref(false)
 async function handleLogin() {
   const { name, password } = loginInfo.value
   if (!name || !password) {
-    $message.warning('请输入用户名和密码')
+    $message.warning('Please enter a UserName and Password')
     return
   }
   try {
     loading.value = true
-    $message.loading('正在验证...')
+    $message.loading('Authentication ...')
     const res = await api.login({ name, password: password.toString() })
-    $message.success('登录成功')
+    $message.success('login successful')
     setToken(res.data.token)
     if (isRemember.value) {
       lStorage.set('loginInfo', { name, password })

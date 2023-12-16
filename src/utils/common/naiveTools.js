@@ -7,9 +7,9 @@ export function setupMessage(NMessage) {
   let loadingMessage = null
   class Message {
     /**
-     * 规则：
-     * * loading message只显示一个，新的message会替换正在显示的loading message
-     * * loading message不会自动清除，除非被替换成非loading message，非loading message默认2秒后自动清除
+     * rule:
+     * * Loading Message only display only one, the new message will replace the displayed MESSAGE that is being displayed
+     * * Loading Message will not be automatically cleared, unless it is replaced with non -Loading Message, non -Loading Message defaults to automatically clear after 2 seconds
      */
 
     removeMessage(message = loadingMessage, duration = 2000) {
@@ -23,16 +23,16 @@ export function setupMessage(NMessage) {
 
     showMessage(type, content, option = {}) {
       if (loadingMessage && loadingMessage.type === 'loading') {
-        // 如果存在则替换正在显示的loading message
+        // If you exist, replace the displaying message that is being displayed
         loadingMessage.type = type
         loadingMessage.content = content
 
         if (type !== 'loading') {
-          // 非loading message需设置自动清除
+          // Non -Loading MESSAGE needs to be set up automatically
           this.removeMessage(loadingMessage, option.duration)
         }
       } else {
-        // 不存在正在显示的loading则新建一个message,如果新建的message是loading message则将message赋值存储下来
+        // There is no display Loading, and a new message is created.
         let message = NMessage[type](content, option)
         if (type === 'loading') {
           loadingMessage = message

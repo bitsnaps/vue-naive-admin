@@ -9,20 +9,20 @@ export function addBaseParams(params) {
 export function resolveResError(code, message) {
   switch (code) {
     case 400:
-      message = message ?? '请求参数错误'
+      message = message ?? 'Request parameter error'
       break
     case 401:
-      message = message ?? '登录已过期'
+      message = message ?? 'Log in to expire'
       useUserStore().logout()
       break
     case 403:
-      message = message ?? '没有权限'
+      message = message ?? 'permission denied'
       break
     case 404:
-      message = message ?? '资源或接口不存在'
+      message = message ?? 'Resources or interfaces do not exist'
       break
     case 500:
-      message = message ?? '服务器异常'
+      message = message ?? 'Server abnormalities'
       break
     default:
       message = message ?? `【${code}】: 未知异常!`

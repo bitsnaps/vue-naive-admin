@@ -6,17 +6,17 @@
           <n-avatar round :size="60" :src="userStore.avatar" />
           <div class="ml-20 flex-col">
             <span class="text-20 opacity-80">Hello, {{ userStore.name }}</span>
-            <span class="mt-4 opacity-50">今日事，今日毕。</span>
+            <span class="mt-4 opacity-50">Today, it is finished today.</span>
           </div>
         </div>
 
-        <p class="mt-20 text-14 opacity-60">一个人几乎可以在任何他怀有无限热忱的事情上成功。</p>
-        <p class="mt-12 text-right text-12 opacity-40">—— 查尔斯·史考伯</p>
+        <p class="mt-20 text-14 opacity-60">One person can succeed in almost any things he has infinite enthusiasm.</p>
+        <p class="mt-12 text-right text-12 opacity-40">—— Charles Sika</p>
       </n-card>
       <n-card class="ml-12 w-70%">
-        <h3 class="text-20 font-normal opacity-90">⚡️欢迎使用 Vue Naive Admin</h3>
+        <h3 class="text-20 font-normal opacity-90">⚡️ Welcome to use Vue Naive Admin</h3>
         <p class="mt-8 opacity-60">
-          这是一款基于 Vue3 + Vite + Pinia + Unocss + Naive UI 的轻量级后台管理模板！！
+          This is a kind of Vue3 + Vite + Pinia + Unocss + Naive UI Lightweight background management template! Intersection
         </p>
         <footer class="mt-24 flex items-center justify-end">
           <n-button
@@ -26,7 +26,7 @@
             type="primary"
             ghost
           >
-            开发文档
+            Development documentation
           </n-button>
           <n-button
             tag="a"
@@ -35,15 +35,15 @@
             type="primary"
             class="ml-12"
           >
-            代码仓库
+            Code warehouse
           </n-button>
         </footer>
       </n-card>
     </div>
     <div class="mt-12 flex">
-      <n-card title="项目" segmented>
+      <n-card title="project" segmented>
         <template #header-extra>
-          <n-button text type="primary">更多</n-button>
+          <n-button text type="primary">More</n-button>
         </template>
         <div class="flex flex-wrap justify-between">
           <n-card
@@ -53,7 +53,7 @@
             class="my-6 w-320 flex-shrink-0 cursor-pointer hover:card-shadow"
             title="Vue Naive Admin"
           >
-            <p class="op-60">一个基于 Vue3.0、Vite、Naive UI 的轻量级后台管理模板</p>
+            <p class="op-60">A Vue3.0、Vite、Naive UI Lightweight background management template</p>
           </n-card>
           <div h-0 w-300></div>
           <div h-0 w-300></div>
@@ -62,12 +62,12 @@
         </div>
       </n-card>
 
-      <n-card class="ml-12" title="技术栈" segmented>
+      <n-card class="ml-12" title="Technology stack" segmented>
         <VChart :option="skillsOption" class="wh-full" autoresize />
       </n-card>
     </div>
 
-    <n-card class="mt-12" title="趋势" segmented>
+    <n-card class="mt-12" title="trend" segmented>
       <VChart :option="trendOption" class="h-480 w-full" autoresize />
     </n-card>
   </AppPage>

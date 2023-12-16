@@ -1,7 +1,7 @@
 <template>
   <CommonPage show-footer>
     <p>
-      文档：
+      document:
       <a c-blue hover-decoration-underline href="https://uno.antfu.me/" target="_blank">
         https://uno.antfu.me/
       </a>
