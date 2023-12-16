@@ -50,16 +50,16 @@ export async function addDynamicRoutes() {
     router.addRoute(NOT_FOUND_ROUTE)
 
     window.$notification?.success({
-      title: '🎉🎉🎉 2.0 全栈版本开源了！',
+      title: '🎉🎉🎉 The 2.0 full stack version is open source!！',
       content: () =>
         h(
           'span',
           {},
-          '2.0为全栈版本，提供前端+后端，全新重构，全面简化，',
+          '2.0 is a full-stack version, providing front-end + back-end, completely refactored, and fully simplified.',
           h(
             'a',
             { href: 'https://admin.isme.top', target: '__blank' },
-            '👉体验 https://admin.isme.top'
+            '👉 See: https://admin.isme.top'
           )
         ),
     })

@@ -46,7 +46,7 @@
         <div mt-20>
           <n-checkbox
             :checked="isRemember"
-            label="记住我"
+            label="Remember me?"
             :on-update:checked="(val) => (isRemember = val)"
           />
         </div>
@@ -61,7 +61,7 @@
             :loading="loading"
             @click="handleLogin"
           >
-            登录
+            Log in
           </n-button>
         </div>
       </div>
