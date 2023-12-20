@@ -6,17 +6,18 @@
         class="mr-20 flex-1 pb-15 pt-15 text-20 font-bold color-primary"
         dark:bg-dark
         type="text"
-        placeholder="输入文章标题..."
+        placeholder="Enter the title of the article..."
       />
       <n-button type="primary" style="width: 80px" :loading="btnLoading" @click="handleSavePost">
         <TheIcon v-if="!btnLoading" icon="line-md:confirm-circle" class="mr-5" :size="18" />
-        保存
+        Save
       </n-button>
     </div>
     <MdEditor
       v-model="post.content"
       :theme="appStore.isDark ? 'dark' : 'light'"
       style="height: calc(100vh - 305px)"
+      :footers="footers"
     />
   </CommonPage>
 </template>
@@ -33,12 +34,13 @@ const appStore = useAppStore()
 // refs
 let post = ref({})
 let btnLoading = ref(false)
+const footers = ref([])
 
 function handleSavePost() {
   btnLoading.value = true
-  $message.loading('正在保存...')
+  $message.loading('Saving...')
   setTimeout(() => {
-    $message.success('保存成功')
+    $message.success('Saved successfully')
     btnLoading.value = false
   }, 2000)
 }

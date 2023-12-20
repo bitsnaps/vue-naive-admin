@@ -6,7 +6,7 @@ export default {
   component: Layout,
   redirect: '/base/index',
   meta: {
-    title: '基础功能',
+    title: 'Basic function',
     icon: 'majesticons:compass-line',
     order: 1,
   },
@@ -16,7 +16,7 @@ export default {
       path: 'index',
       component: () => import('./index.vue'),
       meta: {
-        title: '基础组件',
+        title: 'Basic component',
         icon: 'material-symbols:auto-awesome-outline-rounded',
       },
     },

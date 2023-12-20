@@ -1,14 +1,14 @@
 <template>
-  <CommonPage show-footer title="文章">
+  <CommonPage show-footer title="Article">
     <template #action>
       <div>
         <n-button type="primary" secondary @click="$table?.handleExport()">
           <TheIcon icon="mdi:download" :size="18" class="mr-5" />
-          导出
+          Export
         </n-button>
         <n-button type="primary" class="ml-16" @click="handleAdd">
           <TheIcon icon="material-symbols:add" :size="18" class="mr-5" />
-          新建文章
+          New article
         </n-button>
       </div>
     </template>
@@ -24,17 +24,17 @@
       @on-data-change="(data) => (tableData = data)"
     >
       <template #queryBar>
-        <QueryBarItem label="标题" :label-width="50">
+        <QueryBarItem label="Title" :label-width="50">
           <n-input
             v-model:value="queryItems.title"
             type="text"
-            placeholder="请输入标题"
+            placeholder="Please enter the title"
             @keypress.enter="$table?.handleSearch"
           />
         </QueryBarItem>
       </template>
     </CrudTable>
-    <!-- 新增/编辑/查看 -->
+    <!-- New/Edit/View-->
     <CrudModal
       v-model:visible="modalVisible"
       :title="modalTitle"
@@ -50,32 +50,32 @@
         :model="modalForm"
         :disabled="modalAction === 'view'"
       >
-        <n-form-item label="作者" path="author">
+        <n-form-item label="author" path="author">
           <n-input v-model:value="modalForm.author" disabled />
         </n-form-item>
         <n-form-item
-          label="文章标题"
+          label="Article title"
           path="title"
           :rule="{
             required: true,
-            message: '请输入文章标题',
+            message: 'Please enter the article title',
             trigger: ['input', 'blur'],
           }"
         >
-          <n-input v-model:value="modalForm.title" placeholder="请输入文章标题" />
+          <n-input v-model:value="modalForm.title" placeholder="Please enter the article title" />
         </n-form-item>
         <n-form-item
-          label="文章内容"
+          label="Article content"
           path="content"
           :rule="{
             required: true,
-            message: '请输入文章内容',
+            message: 'Please enter the article content',
             trigger: ['input', 'blur'],
           }"
         >
           <n-input
             v-model:value="modalForm.content"
-            placeholder="请输入文章内容"
+            placeholder="Please enter the article content"
             type="textarea"
             :autosize="{
               minRows: 3,
@@ -97,11 +97,11 @@ import api from './api'
 defineOptions({ name: 'Crud' })
 
 const $table = ref(null)
-/** 表格数据，触发搜索的时候会更新这个值 */
+/** Table data, this value will be updated when searching for search */
 const tableData = ref([])
-/** QueryBar筛选参数（可选） */
+/** QueryBar screening parameters (optional) */
 const queryItems = ref({})
-/** 补充参数（可选） */
+/** Supplementary parameters (optional) */
 const extraParams = ref({})
 
 onActivated(() => {
@@ -111,7 +111,7 @@ onActivated(() => {
 const columns = [
   { type: 'selection', fixed: 'left' },
   {
-    title: '发布',
+    title: 'Release',
     key: 'isPublish',
     width: 60,
     align: 'center',
@@ -126,11 +126,11 @@ const columns = [
       })
     },
   },
-  { title: '标题', key: 'title', width: 150, ellipsis: { tooltip: true } },
-  { title: '分类', key: 'category', width: 80, ellipsis: { tooltip: true } },
-  { title: '创建人', key: 'author', width: 80 },
+  { title: 'Title', key: 'title', width: 150, ellipsis: { tooltip: true } },
+  { title: 'Classification', key: 'category', width: 80, ellipsis: { tooltip: true } },
+  { title: 'Founder', key: 'author', width: 80 },
   {
-    title: '创建时间',
+    title: 'Creation time',
     key: 'createDate',
     width: 150,
     render(row) {
@@ -138,7 +138,7 @@ const columns = [
     },
   },
   {
-    title: '最后更新时间',
+    title: 'Last update time',
     key: 'updateDate',
     width: 150,
     render(row) {
@@ -146,7 +146,7 @@ const columns = [
     },
   },
   {
-    title: '操作',
+    title: 'Operate',
     key: 'actions',
     width: 240,
     align: 'center',
@@ -162,7 +162,7 @@ const columns = [
             secondary: true,
             onClick: () => handleView(row),
           },
-          { default: () => '查看', icon: renderIcon('majesticons:eye-line', { size: 14 }) }
+          { default: () => 'View', icon: renderIcon('majesticons:eye-line', { size: 14 }) }
         ),
         h(
           NButton,
@@ -172,7 +172,7 @@ const columns = [
             style: 'margin-left: 15px;',
             onClick: () => handleEdit(row),
           },
-          { default: () => '编辑', icon: renderIcon('material-symbols:edit-outline', { size: 14 }) }
+          { default: () => 'Edit', icon: renderIcon('material-symbols:edit-outline', { size: 14 }) }
         ),
 
         h(
@@ -184,7 +184,7 @@ const columns = [
             onClick: () => handleDelete(row.id),
           },
           {
-            default: () => '删除',
+            default: () => 'Delete',
             icon: renderIcon('material-symbols:delete-outline', { size: 14 }),
           }
         ),
@@ -193,12 +193,12 @@ const columns = [
   },
 ]
 
-// 选中事件
+// Chose event
 function onChecked(rowKeys) {
-  if (rowKeys.length) $message.info(`选中${rowKeys.join(' ')}`)
+  if (rowKeys.length) $message.info(`Select ${rowKeys.join(' ')}`)
 }
 
-// 发布
+// release
 function handlePublish(row) {
   if (isNullOrUndef(row.id)) return
 
@@ -206,7 +206,7 @@ function handlePublish(row) {
   setTimeout(() => {
     row.isPublish = !row.isPublish
     row.publishing = false
-    $message?.success(row.isPublish ? '已发布' : '已取消发布')
+    $message?.success(row.isPublish ? 'Published' : 'Cancelled release')
   }, 1000)
 }
 
@@ -223,8 +223,8 @@ const {
   modalForm,
   modalFormRef,
 } = useCRUD({
-  name: '文章',
-  initForm: { author: '大脸怪' },
+  name: 'Article',
+  initForm: { author: 'Big face' },
   doCreate: api.addPost,
   doDelete: api.deletePost,
   doUpdate: api.updatePost,

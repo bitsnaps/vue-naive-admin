@@ -16,7 +16,7 @@
         target="__blank"
         hover="decoration-underline color-primary"
       >
-        赣ICP备2020015008号-2
+        Gan Gan ICP No. 2020015008-2
       </a>
     </p>
   </footer>

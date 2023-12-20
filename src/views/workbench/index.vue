@@ -67,7 +67,7 @@
       </n-card>
     </div>
 
-    <n-card class="mt-12" title="trend" segmented>
+    <n-card class="mt-12" title="Trend" segmented>
       <VChart :option="trendOption" class="h-480 w-full" autoresize />
     </n-card>
   </AppPage>

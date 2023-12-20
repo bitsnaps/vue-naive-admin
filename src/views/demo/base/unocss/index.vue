@@ -63,7 +63,7 @@
           </div>
         </div>
       </div>
-      <h2 mt-10 text-14 font-normal color-gray>Flex 骰子</h2>
+      <h2 mt-10 text-14 font-normal color-gray>Flex dice</h2>
     </div>
   </CommonPage>
 </template>

@@ -10,7 +10,7 @@
       <n-upload-dragger>
         <div class="h-150 f-c-c flex-col">
           <TheIcon icon="mdi:upload" :size="68" class="mb-12 c-primary" />
-          <n-text class="text-14 c-gray">点击或者拖动文件到该区域来上传</n-text>
+          <n-text class="text-14 c-gray">Click or drag file to the area to upload</n-text>
         </div>
       </n-upload-dragger>
     </n-upload>
@@ -57,12 +57,12 @@ const imgList = reactive([
 ])
 
 watch(copied, (val) => {
-  val && $message.success('已复制到剪切板')
+  val && $message.success('Copy to the shear plate')
 })
 
 function onBeforeUpload({ file }) {
   if (!file.file?.type.startsWith('image/')) {
-    $message.error('只能上传图片')
+    $message.error('Can only upload pictures')
     return false
   }
   return true
@@ -70,13 +70,13 @@ function onBeforeUpload({ file }) {
 
 async function handleUpload({ file, onFinish }) {
   if (!file || !file.type) {
-    $message.error('请选择文件')
+    $message.error('Please select the file')
   }
 
-  // 模拟上传
-  $message.loading('上传中...')
+  // Simulation upload
+  $message.loading('Uploading...')
   setTimeout(() => {
-    $message.success('上传成功')
+    $message.success('Successfully upload')
     imgList.push({ fileName: file.name, url: URL.createObjectURL(file.file) })
     onFinish()
   }, 1500)

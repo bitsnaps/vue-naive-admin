@@ -39,31 +39,31 @@ const tagsStore = useTagsStore()
 
 const options = computed(() => [
   {
-    label: '重新加载',
+    label: 'Reload',
     key: 'reload',
     disabled: props.currentPath !== tagsStore.activeTag,
     icon: renderIcon('mdi:refresh', { size: '14px' }),
   },
   {
-    label: '关闭',
+    label: 'Close',
     key: 'close',
     disabled: tagsStore.tags.length <= 1,
     icon: renderIcon('mdi:close', { size: '14px' }),
   },
   {
-    label: '关闭其他',
+    label: 'Close the other',
     key: 'close-other',
     disabled: tagsStore.tags.length <= 1,
     icon: renderIcon('mdi:arrow-expand-horizontal', { size: '14px' }),
   },
   {
-    label: '关闭左侧',
+    label: 'Close the left side',
     key: 'close-left',
     disabled: tagsStore.tags.length <= 1 || props.currentPath === tagsStore.tags[0].path,
     icon: renderIcon('mdi:arrow-expand-left', { size: '14px' }),
   },
   {
-    label: '关闭右侧',
+    label: 'Turn off the right side',
     key: 'close-right',
     disabled:
       tagsStore.tags.length <= 1 ||

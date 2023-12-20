@@ -26,5 +26,8 @@
   "files.associations": {
     "*.env.*": "dotenv",
     "*.css": "postcss"
-  }
+  },
+  "search.useIgnoreFiles": true,
+  "search.useGlobalIgnoreFiles": false,
+  "search.useParentIgnoreFiles": false
 }

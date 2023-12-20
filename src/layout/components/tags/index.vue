@@ -83,7 +83,7 @@ function setContextMenu(x, y, currentPath) {
   Object.assign(contextMenuOption, { x, y, currentPath })
 }
 
-// 右击菜单
+// Right -click menu
 async function handleContextMenu(e, tagItem) {
   const { clientX, clientY } = e
   hideContextMenu()

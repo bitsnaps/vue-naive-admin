@@ -14,7 +14,7 @@ export const basicRoutes = [
     component: () => import('@/views/login/index.vue'),
     isHidden: true,
     meta: {
-      title: '登录页',
+      title: 'Login page',
     },
   },
 
@@ -23,7 +23,7 @@ export const basicRoutes = [
     path: '/external-link',
     component: Layout,
     meta: {
-      title: '外部链接',
+      title: 'External link',
       icon: 'mdi:link-variant',
       order: 4,
     },
@@ -32,7 +32,7 @@ export const basicRoutes = [
         name: 'LinkGithubSrc',
         path: 'https://github.com/zclzone/vue-naive-admin',
         meta: {
-          title: '源码 - github',
+          title: 'Source code - github',
           icon: 'mdi:github',
         },
       },
@@ -40,7 +40,7 @@ export const basicRoutes = [
         name: 'LinkGiteeSrc',
         path: 'https://gitee.com/zclzone/vue-naive-admin',
         meta: {
-          title: '源码 - gitee',
+          title: 'Source code - gitee',
           icon: 'simple-icons:gitee',
         },
       },
@@ -48,7 +48,7 @@ export const basicRoutes = [
         name: 'LinkDocs',
         path: 'https://zclzone.github.io/vue-naive-admin-docs',
         meta: {
-          title: '文档 - vuepress',
+          title: 'document - vuepress',
           icon: 'mdi:vuejs',
         },
       },

@@ -5,7 +5,7 @@
         <img src="@/assets/images/404.webp" width="500" />
       </template>
       <template #footer>
-        <n-button @click="replace('/')">返回首页</n-button>
+        <n-button @click="replace('/')">Back to the Home</n-button>
       </template>
     </n-result>
   </AppPage>

@@ -16,8 +16,8 @@
     </n-space>
 
     <div flex-shrink-0>
-      <n-button secondary type="primary" @click="emit('reset')">重置</n-button>
-      <n-button ml-20 type="primary" @click="emit('search')">搜索</n-button>
+      <n-button secondary type="primary" @click="emit('reset')">Reset</n-button>
+      <n-button ml-20 type="primary" @click="emit('search')">Search</n-button>
     </div>
   </div>
 </template>

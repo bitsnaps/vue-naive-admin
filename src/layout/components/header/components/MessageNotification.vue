@@ -38,30 +38,30 @@ const activeTab = ref('')
 const tabs = [
   {
     name: 'zan',
-    title: '点赞',
+    title: 'Like',
     messages: [
-      { content: '你的文章《XX》收到一条点赞', time: formatDateTime() },
-      { content: '你的文章《YY》收到一条点赞', time: formatDateTime() },
-      { content: '你的文章《AA》收到一条点赞', time: formatDateTime() },
-      { content: '你的文章《BB》收到一条点赞', time: formatDateTime() },
-      { content: '你的文章《CC》收到一条点赞', time: formatDateTime() },
-      { content: '你的文章《DD》收到一条点赞', time: formatDateTime() },
+      { content: 'Your article "XX" received a likes', time: formatDateTime() },
+      { content: 'Your article "YY" received a likes', time: formatDateTime() },
+      { content: 'Your article "AA" received a likes', time: formatDateTime() },
+      { content: 'Your article "BB" received a likes', time: formatDateTime() },
+      { content: 'Your article "CC" received a likes', time: formatDateTime() },
+      { content: 'Your article "DD" received a likes', time: formatDateTime() },
     ],
   },
   {
     name: 'star',
-    title: '关注',
+    title: 'Focus on',
     messages: [
-      { content: '张三 关注了你', time: formatDateTime() },
-      { content: '王五 关注了你', time: formatDateTime() },
+      { content: 'Zhang San Follow you', time: formatDateTime() },
+      { content: 'King five Follow you', time: formatDateTime() },
     ],
   },
   {
     name: 'comment',
-    title: '评论',
+    title: 'Comment',
     messages: [
-      { content: '张三 评论了你的文章《XX》"学到了"', time: formatDateTime() },
-      { content: '李四 评论了你的文章《YY》"不如Vue"', time: formatDateTime() },
+      { content: 'Zhang San Comment on your article "XX""learned"', time: formatDateTime() },
+      { content: 'Li Comment on your article "YY"YY》"Not as good as Vue"', time: formatDateTime() },
     ],
   },
 ]

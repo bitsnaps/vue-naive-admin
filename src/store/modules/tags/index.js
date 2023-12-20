@@ -34,7 +34,7 @@ export const useTagsStore = defineStore('tag', {
     },
     async reloadTag(path, keepAlive) {
       const findItem = this.tags.find((item) => item.path === path)
-      // 更新key可让keepAlive失效
+      // Update Key to make Keepalive fail
       if (findItem && keepAlive) findItem.keepAlive = false
 
       $loadingBar.start()
