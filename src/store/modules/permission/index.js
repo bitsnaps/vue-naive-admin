@@ -2,15 +2,15 @@ import { defineStore } from 'pinia'
 import { asyncRoutes, basicRoutes } from '@/router/routes'
 
 function hasPermission(route, role) {
-  // * 不需要权限直接返回true
+  // * No authority is required to return True directly
   if (!route.meta?.requireAuth) return true
 
   const routeRole = route.meta?.role ? route.meta.role : []
 
-  // * 登录用户没有角色或者路由没有设置角色判定为没有权限
+  // * Log in to the user without the role or the route without setting the character to determine that there is no permissions
   if (!role.length || !routeRole.length) return false
 
-  // * 路由指定的角色包含任一登录用户角色则判定有权限
+  // * The character specified by the route contains any login user role, but it is determined that there is authority
   return role.some((item) => routeRole.includes(item))
 }
 

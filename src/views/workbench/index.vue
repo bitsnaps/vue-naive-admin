@@ -112,7 +112,7 @@ const trendOption = {
   xAxis: [
     {
       type: 'category',
-      data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+      data: ['January', 'February', 'March', 'April','May', 'May', 'June', 'July', 'August', 'September', 'November','November', 'December'],
       axisPointer: {
         type: 'shadow',
       },

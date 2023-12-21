@@ -63,7 +63,7 @@ export function debounce(method, wait, immediate) {
         method.apply(context, args)
       }
     } else {
-      // 如果immediate为false，则函数wait毫秒后执行
+      // If Immediated is false, the function is executed after milliseconds
       timeout = setTimeout(() => {
         /**
          * ARGS is an array object, so using fn.apply

@@ -21,14 +21,14 @@ import { utils, writeFile } from 'xlsx'
 
 const props = defineProps({
   /**
-   * @remote true: 后端分页  false： 前端分页
+   * @remote true: Back -end pagination  false： Front -end paging
    */
   remote: {
     type: Boolean,
     default: true,
   },
   /**
-   * @remote 是否分页
+   * @remote Whether to pages
    */
   isPagination: {
     type: Boolean,
@@ -46,14 +46,14 @@ const props = defineProps({
     type: Array,
     required: true,
   },
-  /** queryBar中的参数 */
+  /** Parameters in querybar */
   queryItems: {
     type: Object,
     default() {
       return {}
     },
   },
-  /** 补充参数（可选） */
+  /** Supplementary parameters (optional) */
   extraParams: {
     type: Object,
     default() {
@@ -61,13 +61,13 @@ const props = defineProps({
     },
   },
   /**
-   * ! 约定接口入参出参
-   * * 分页模式需约定分页接口入参
-   *    @pageSize 分页参数：一页展示多少条，默认10
-   *    @pageNo   分页参数：页码，默认1
-   * * 需约定接口出参
-   *    @pageData 分页模式必须,非分页模式如果没有pageData则取上一层data
-   *    @total    分页模式必须，非分页模式如果没有total则取上一层data.length
+   * ! The agreed interface is entered into the existing ginseng
+   * * The paging mode needs to be agreed on the pages interface to enter the parameters
+   *    @pageSize Pagling parameters: How many are displayed in one page, default 10
+   *    @pageNo   Pagling parameter: page number, default 1
+   * * Need to make an interface out of the parameter
+   *    @pageData The paging mode must, the non -paging mode does not have a layer of data if there is no pagedata
+   *    @total    The paging mode must be, the non -paging mode does not take a layer of Data.Length if there is no TOTAL
    */
   getData: {
     type: Function,
@@ -85,7 +85,7 @@ async function handleQuery() {
   try {
     loading.value = true
     let paginationParams = {}
-    // 如果非分页模式或者使用前端分页,则无需传分页参数
+    // If the non -paging mode or the front -end pages are used, there is no need to pass the pages parameters
     if (props.isPagination && props.remote) {
       paginationParams = { pageNo: pagination.page, pageSize: pagination.pageSize }
     }

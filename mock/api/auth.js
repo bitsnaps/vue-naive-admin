@@ -20,7 +20,7 @@ export default [
       } else {
         return {
           code: -1,
-          message: '没有此用户',
+          message: 'No user',
         }
       }
     },

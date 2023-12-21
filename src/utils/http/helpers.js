@@ -25,7 +25,7 @@ export function resolveResError(code, message) {
       message = message ?? 'Server abnormalities'
       break
     default:
-      message = message ?? `【${code}】: 未知异常!`
+      message = message ?? `【${code}】: Unknown!`
       break
   }
   return message

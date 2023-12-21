@@ -31,13 +31,13 @@ export async function addDynamicRoutes() {
   // return Promise.reject('123')
   const token = getToken()
 
-  // 没有token情况
+  // No token
   if (isNullOrWhitespace(token)) {
     router.addRoute(EMPTY_ROUTE)
     return
   }
 
-  // 有token的情况
+  // In the case of token
   const userStore = useUserStore()
   try {
     const permissionStore = usePermissionStore()
@@ -65,7 +65,7 @@ export async function addDynamicRoutes() {
     })
   } catch (error) {
     console.error(error)
-    $message.error('初始化用户信息失败: ' + error)
+    $message.error('Initialized user information failed: ' + error)
     userStore.logout()
   }
 }

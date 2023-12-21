@@ -16,11 +16,11 @@ export const useAppStore = defineStore('app', {
     setCollapsed(collapsed) {
       this.collapsed = collapsed
     },
-    /** 设置暗黑模式 */
+    /** Set the dark mode */
     setDark(isDark) {
       this.isDark = isDark
     },
-    /** 切换/关闭 暗黑模式 */
+    /** Switch/close the dark mode */
     toggleDark() {
       this.isDark = !this.isDark
     },

@@ -1,8 +1,9 @@
 <template>
+  <!-- :date-locale="dateZhCN" -->
+  <!-- :locale="defaultLocale" -->
+
   <n-config-provider
     wh-full
-    :locale="zhCN"
-    :date-locale="dateZhCN"
     :theme="appStore.isDark ? darkTheme : undefined"
     :theme-overrides="naiveThemeOverrides"
   >
@@ -11,7 +12,7 @@
 </template>
 
 <script setup>
-import { zhCN, dateZhCN, darkTheme } from 'naive-ui'
+import { /*zhCN, dateZhCN,*/ darkTheme } from 'naive-ui'
 import { useCssVar } from '@vueuse/core'
 import { kebabCase } from 'lodash-es'
 import { naiveThemeOverrides } from '~/settings'

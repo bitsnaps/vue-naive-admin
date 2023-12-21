@@ -49,10 +49,10 @@ function handleMouseWheel(e) {
   const wrapperWidth = wrapper.value?.offsetWidth
   const contentWidth = content.value?.offsetWidth
   /**
-   * @wheelDelta 平行滚动的值 >0： 右移  <0: 左移
-   * @translateX 内容translateX的值
-   * @wrapperWidth 容器的宽度
-   * @contentWidth 内容的宽度
+   * @wheelDelta Value of parallel scroll> 0: Right move <0: left move
+   * @translateX Content of the value of translatex
+   * @wrapperWidth The width of the container
+   * @contentWidth Width of the content
    */
   if (wheelDelta < 0) {
     if (wrapperWidth > contentWidth && translateX.value < -10) return

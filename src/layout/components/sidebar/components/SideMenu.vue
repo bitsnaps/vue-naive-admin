@@ -59,7 +59,7 @@ function getMenuItem(route, basePath = '') {
   if (!visibleChildren.length) return menuItem
 
   if (visibleChildren.length === 1) {
-    // 单个子路由处理
+    // Single sub -routing treatment
     const singleRoute = visibleChildren[0]
     menuItem = {
       ...menuItem,
